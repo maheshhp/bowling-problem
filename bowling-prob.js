@@ -30,6 +30,8 @@ function calculateScore(rollArray) {
     if (rollArray[i] === 10) {
       scoreArray[frameCount] = [10];
       frameCount += 1;
+    } else if (rollArray[i] > 10) {
+      return 'Invalid input';
     } else {
       scoreArray[frameCount] = [rollArray[i], rollArray[i + 1]];
       i += 1;

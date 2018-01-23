@@ -38,6 +38,9 @@ describe('Regular game', () => {
   test('Expected score from calculation returned for games with strike', () => {
     expect(roll([10, 3, 6, 3, 6, 4, 6, 3, 6, 10, 3, 6, 3, 6, 3, 6, 5, 5, 3])).toBe(118);
   });
+  test('Expected score from calculation returned for games with value > 10', () => {
+    expect(roll([10, 3, 6, 3, 6, 4, 6, 3, 6, 11, 3, 6, 3, 6, 3, 6, 5, 5, 3])).toMatch('Invalid input');
+  });
   test('Expected score from calculation returned for games with spare', () => {
     expect(roll([4, 6, 3, 6, 3, 6, 4, 6, 3, 6, 10, 3, 6, 3, 6, 3, 6, 5, 5, 3])).toBe(112);
   });
