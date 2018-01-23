@@ -23,3 +23,14 @@ describe('Spare in 10th frame', () => {
     expect().toBe();
   });
 });
+describe('Regular game', () => {
+  test('Expected score from calculation returned for games with strike', () => {
+    expect().toBe();
+  });
+  test('Expected score from calculation returned for games with spare', () => {
+    expect().toBe();
+  });
+  test('Invalid input string returned for invalid array input containing < 10 frames', () => {
+    expect().toBe();
+  });
+});
