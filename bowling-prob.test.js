@@ -9,7 +9,7 @@ describe('Strike in 10th frame', () => {
     expect(roll([10, 3, 6, 3, 6, 4, 6, 3, 6, 10, 3, 6, 3, 6, 3, 6, 5, 3])).toBe(113);
   });
   test('Expected score from calculation returned for non-strike in fill balls', () => {
-    expect(roll([10, 3, 6, 3, 6, 4, 6, 3, 6, 10, 3, 6, 3, 6, 3, 6, 10, 8, 10])).toBe(133);
+    expect(roll([10, 3, 6, 3, 6, 4, 6, 3, 6, 10, 3, 6, 3, 6, 3, 6, 10, 8, 6])).toBe(129);
   });
   test('Expected score from calculation returned for strike in fill balls', () => {
     expect(roll([10, 3, 6, 3, 6, 4, 6, 3, 6, 10, 3, 6, 3, 6, 3, 6, 10, 10, 10])).toBe(135);
