@@ -10,16 +10,13 @@ function calculateSum(scoreArray) {
       }
     } else if ((scoreArray[i][0] + scoreArray[i][1]) === 10) {
       totalScore += scoreArray[i][0] + scoreArray[i][1] + scoreArray[i + 1][0];
-    } else if (((scoreArray[i][0] + scoreArray[i][1]) >= 10)
-     || scoreArray[i][0] < 0 || scoreArray[i][1] < 0) {
+    } else if ((scoreArray[i][0] + scoreArray[i][1]) > 10) {
       return 'Invalid input';
     } else {
       totalScore += scoreArray[i][0] + scoreArray[i][1];
     }
   }
-  for (let j = 0; j < scoreArray[i].length; j += 1) {
-    totalScore += scoreArray[i][j];
-  }
+  totalScore += scoreArray[i].reduce((acc, element) => acc + element);
   return totalScore;
 }
 function calculateScore(rollArray) {
@@ -30,7 +27,7 @@ function calculateScore(rollArray) {
     if (rollArray[i] === 10) {
       scoreArray[frameCount] = [10];
       frameCount += 1;
-    } else if (rollArray[i] > 10) {
+    } else if (rollArray[i] > 10 || rollArray[i] < 0) {
       return 'Invalid input';
     } else {
       scoreArray[frameCount] = [rollArray[i], rollArray[i + 1]];
