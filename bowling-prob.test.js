@@ -12,3 +12,14 @@ describe('Strike in 10th frame', () => {
     expect().toBe();
   });
 });
+describe('Spare in 10th frame', () => {
+  test('Fill ball has been given', () => {
+    expect().toBe();
+  });
+  test('Expected score from calculation returned for non-strike fill ball', () => {
+    expect().toBe();
+  });
+  test('Expected score from calculation returned for strike fill ball', () => {
+    expect().toBe();
+  });
+});
