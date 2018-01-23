@@ -1,3 +1,4 @@
+// Calculates scores in the frames
 function calculateSum(scoreArray) {
   let totalScore = 0;
   let i = 0;
@@ -19,6 +20,7 @@ function calculateSum(scoreArray) {
   totalScore += scoreArray[i].reduce((acc, element) => acc + element);
   return totalScore;
 }
+// Segregates scores into frames
 function calculateScore(rollArray) {
   let frameCount = 0;
   let scoreArray = [];
@@ -42,6 +44,7 @@ function calculateScore(rollArray) {
   }
   return calculateSum(scoreArray);
 }
+// Provides input to the calculateScore containing scores of individual rolls
 function roll(bowlingFrames) {
   if (bowlingFrames.length < 10) {
     return 'Invalid input';
